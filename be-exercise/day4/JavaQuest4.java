@@ -20,14 +20,12 @@ public class JavaQuest4 {
     // 1. Even numbers
     // 2. Divisible by 3
     // 3. > 0
-    int counter = 0;
-
-    for (int i = 0; i < 100; i++) { // You cannot change this line
-      if(counter == 10){
+    for (int i = 0, j = 0; i < 100; i++) { // You cannot change this line
+      if(j == 10){
         break;
       }else if(i%2 ==0 && i != 0 && i%3 ==0){
         System.out.println(i);
-        counter++;
+        j++;
       }
     }
   }
