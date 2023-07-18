@@ -39,7 +39,7 @@ public class JavaQuest10 {
 
   public static int[] insertNum(int[] arr, int pos, int value){
 
-    if(pos > arr.length - 1) return arr;
+    if(pos > arr.length - 1 || pos < 0) return arr;
 
     for(int i = arr.length -1; i > pos; i--){
       arr[i] = arr[i -1];
