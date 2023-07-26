@@ -22,8 +22,7 @@ public class JavaQuest20 {
     StringBuilder sb = new StringBuilder(s);
     for(int i=0; i<s.length(); i++){
       if(sb.toString().equals(goal)) return true;
-      sb.append(sb.charAt(0));
-      sb.deleteCharAt(0);
+      sb.append(sb.charAt(0)).deleteCharAt(0);
     }
     return false;
   }
