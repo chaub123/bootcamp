@@ -21,6 +21,14 @@ public class StringBox {
     return this.string;
   }
 
+  public char[] toCharArray(){
+    char[] result = new char[this.string.length()];
+    for(int i=0; i<result.length; i++){
+      result[i] = this.string.charAt(i);
+    }
+    return result;
+  }
+
   public StringBox append(String string){
     this.string += string;
     return this;

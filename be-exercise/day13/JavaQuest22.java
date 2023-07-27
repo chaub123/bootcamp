@@ -37,7 +37,6 @@ public class JavaQuest22 {
       product *= Integer.parseInt(str);
       sum += Integer.parseInt(str);
     }
-
     return product - sum;
   }
 }
