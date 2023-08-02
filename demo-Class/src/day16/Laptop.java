@@ -1,5 +1,7 @@
 package day16;
 
+import java.util.Objects;
+
 public class Laptop extends Machine {
   Keyboard keyboard;
   Monitor monitor;
@@ -23,6 +25,21 @@ public class Laptop extends Machine {
     this.keyboard = keyboard;
     this.monitor = monitor;
   
+  }
+
+  @Override
+  public boolean equals(Object o){
+    if(this == o){
+      return true;
+    }
+
+    if(!(o instanceof Laptop)){
+      return false;
+    }
+    Laptop l = (Laptop) o;
+    return Objects.equals(l.keyboard, this.keyboard)
+          && Objects.equals(l.monitor, this.monitor);
+
   }
 
   @Override
