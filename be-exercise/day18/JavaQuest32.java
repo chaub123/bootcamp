@@ -41,7 +41,7 @@ public class JavaQuest32 {
 
     for(int i=0, j=0; i< nums.length; i+=2){
       result[i] = nums[j];
-      result[i+1] = nums[nums.length / 2+j];
+      result[i+1] = nums[nums.length / 2 + j];
       j++;
     }
     return result;
