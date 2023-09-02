@@ -66,7 +66,9 @@ FROM worker w LEFT JOIN bonus b on w.worker_ID = b.worker_ref_id
 WHERE date_format(JOINING_DATE, '%Y') = '2021'
 ;
 
--- Task 6 :
+-- Task 6 : Delete all data in table "worker"
+ALTER TABLE BONUS DROP FOREIGN KEY bonus_ibfk_1;
+truncate worker;
 
-
--- TAsk 7 :
+-- TAsk 7 : Drop table "Worker"
+DROP TABLE worker;
