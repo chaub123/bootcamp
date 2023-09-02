@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class TestList {
+  public static void main(String[] args) {
+    List<Integer> integers = new LinkedList<>();
+
+    Runnable add = () -> {
+      for(int i=0; i<1000000; i++){
+        integers.add(1);
+      }
+    };
+
+    Thread thread1 = new Thread(add);
+    Thread thread2 = new Thread(add);
+    thread1.start();
+    thread2.start();
+
+    try{
+      thread1.join();
+      thread2.join();
+    }catch(InterruptedException e){
+      System.out.println(e);
+    }
+
+    System.out.println(integers.size());
+  }
+}
