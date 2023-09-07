@@ -30,7 +30,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
         // TODO: Complete the method
         float sum = 0.0f;
         for(Furniture key : ordersOfFurnitures.keySet()){
-            sum += ordersOfFurnitures.get(key) * key.cost();
+            sum += getTypeCount(key) * key.cost();
         }
         return sum;
     }
@@ -42,14 +42,14 @@ public class FurnitureOrder implements FurnitureOrderInterface {
 
     public float getTypeCost(Furniture type) {
         // TODO: Complete the method
-        return ordersOfFurnitures.getOrDefault(type, 0) * type.cost() ;
+        return getTypeCount(type) * type.cost() ;
     }
 
     public int getTotalOrderQuantity() {
         // TODO: Complete the method
         int sum = 0;
         for(Furniture key : ordersOfFurnitures.keySet()){
-            sum += ordersOfFurnitures.get(key);
+            sum += getTypeCount(key);
         }
         return sum;
     }
