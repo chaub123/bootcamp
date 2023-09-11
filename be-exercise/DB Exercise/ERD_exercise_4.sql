@@ -57,7 +57,8 @@ ORDER BY group_id;
 
 
 
-
+SELECT *
+FROM players, matches;
 
 
 
