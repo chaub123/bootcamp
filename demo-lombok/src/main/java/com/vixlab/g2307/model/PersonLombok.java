@@ -46,7 +46,7 @@ public class PersonLombok {
     List<String> list = new ArrayList<>();
     list.add("hello");
     list.add("world");
-    list.add("hi")
+    list.add("hi");
     Collections.sort(null, null);;
 
 
